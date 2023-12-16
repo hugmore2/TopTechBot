@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    {% include 'bot/partials/_head.html' %}
+    {% block additional_head %}{% endblock additional_head %}
+</head>
+
+<body>
+    <div class="bot-wrapper">
+        {% if app_setup.show_header %}
+        {% include 'bot/partials/_header.html' %}
+        {% endif %}
+
+        {% block content %}{% endblock content %}
+
+        {% if app_setup.show_pagination %}
+        {% include 'bot/partials/_pagination.html' %}
+        {% endif %}
+
+        {% if app_setup.show_footer %}
+        {% include 'bot/partials/_footer.html' %}
+        {% endif %}
+
+    </div>
+</body>
+
+</html>

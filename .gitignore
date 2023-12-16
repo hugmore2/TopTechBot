@@ -1,9 +1,9 @@
-\TopTechBot\static\
-\TopTechBot\media\
-\TopTechBot\project\local_settings.py
+/TopTechBot/static/
+/TopTechBot/media/
+/TopTechBot/project/local_settings.py
 gunicorn-error-log
 __localcode
-\data\
+/data/
 
 # Django #
 

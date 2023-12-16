@@ -1,0 +1,26 @@
+{% extends 'bot/base.html' %}
+
+{% block content %}
+    <main class="main-content section-wrapper">
+        <div class="section-content-wide">
+            <div class="section-gap">
+
+                {% if posts %}
+                    <div class="card-grid">
+                        {% for post in posts %}
+                            {% include 'bot/partials/_post-card.html' with i=forloop.counter0 %}
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <div class="not-found center">
+                        <h1>📍 Nada encontrado! 😔</h1>
+                        <p>Não foi encontrado nada neste link, por favor, clique 
+                            noutro link do nosso site ou vá para a 
+                            <a href="{% url 'bot:index' %}">Home</a>. 🏠
+                        </p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </main>
+{% endblock content %}
