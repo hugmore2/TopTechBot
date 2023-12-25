@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/toptech1/public_html/
+    - /bin/cp index.html $https://toptech.pt:2078/TopTechBot/toptechbot/bot/templates/bot/pages/index.html
+    - /bin/cp style.css $https://toptech.pt:2078/TopTechBot/toptechbot/bot/static/bot/css/style.css
